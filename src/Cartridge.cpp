@@ -235,14 +235,15 @@ void Cartridge::sample_audio(){
 
 void Cartridge::render_audio(){
   // four channel
- 
+ /*
   sigmaDeltaWrite(p1_channel, p1_output * 12);
   sigmaDeltaWrite(p2_channel, p2_output * 12);
   sigmaDeltaWrite(n_channel, n_output * 6);
   sigmaDeltaWrite(t_channel, t_output * 16);
+*/
 
   // single channel
-  /*
+  
   uint8_t sum = 0;
   sum+=p1_output*0.8;
   sum+=p2_output*0.8;
@@ -250,7 +251,6 @@ void Cartridge::render_audio(){
   sum+=t_output;
   //sigmaDeltaWrite(t_channel, sum);
   dacWrite(25,sum*1.25);
-  */
 }
 
 void Cartridge::clock_apu(){
