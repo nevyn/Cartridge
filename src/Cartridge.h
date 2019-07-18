@@ -16,12 +16,12 @@ class Cartridge
 	void init();
 	void play_nes(uint8_t* music);
 	void frame_counter_cb(void (*action)());
+	void reset_nes();
 	
   private:
 	void parse_vgm(uint8_t* music);
 	void read_vgm_header(uint8_t* music);
 	uint32_t get_32_bit(uint8_t* music, uint32_t index);
-	void reset_nes();
 	void sample_audio();
 	void render_audio();
 	void clock_apu();
